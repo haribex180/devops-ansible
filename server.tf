@@ -4,12 +4,12 @@ region = "us-east-2"
 resource "aws_instance" "myawsserver" {
   ami = "ami-077e31c4939f6a2f3"
   instance_type = "t2.micro"
-  key_name = "gagan-import"
+  key_name = "hari-keyp"
 
   tags = {
-    Name = "Gagan-DevOps-server-IBM"
+    Name = "Hari-IBM"
     env = "production"
-    owner = "Gagandeep"
+    owner = "Haribabu"
   }
   provisioner "local-exec" {
     command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /tmp/inv"
